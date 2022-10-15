@@ -15,6 +15,9 @@ const app = express()
 app.use(express.json());
 app.use(cors())
 
+app.get("/", (req, res)=>{
+    res.send("Go to /products to get the data" )
+})
 
 app.get("/products", (req, res)=>{
     console.log(req.query)
